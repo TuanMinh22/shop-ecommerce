@@ -1,0 +1,99 @@
+1. admins
+- id (pk)
+- name
+- email (unq)
+- password
+- phone
+- address
+- status
+  - Active
+  - Inactive
+- types
+  - admin
+  - staff
+- create-at
+- update-at
+
+
+2. users
+- id (pk)
+- name
+- email (unq)
+- password
+- phone
+- address
+- status
+  - Active
+  - Inactive
+- create-at
+- update-at
+
+
+3. Categories
+- id (pk)
+- name
+- slug (unq) // like id
+- status
+  - Active
+  - Inactive
+- create-at
+- update-at
+
+4. Brands
+- id (pk)
+- name
+- slug (unq) // like id
+- status
+  - Active
+  - Inactive
+- create-at
+- update-at
+
+5. Products
+- id (pk)
+- name
+- slug (unq) // like id
+- description
+- summary
+- stock (qty)
+- price
+- discount-price (opt)
+- images // src link
+- categories_id (fk)
+- brand_id (fk)
+- status
+  - Active
+  - Inactive
+- create-at
+- update-at
+
+6. Reviews
+- id (pk)
+- user_id (fk)
+- product_id (fk)
+- comment
+- rating
+- create-at
+- update-at
+
+7. Orders
+- id (pk)
+- user_id (fk)
+- status
+  - Processing
+  - Confirmed
+  - Shipping
+  - Delivered
+  - Cancelled
+- create-at
+- update-at
+
+8. Order_details
+- id (pk)
+- user_id (fk)
+- product_id (fk)
+- qty
+- price
+- total
+- create-at
+- update-at
